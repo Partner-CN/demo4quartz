@@ -1,9 +1,7 @@
 package partner.cn.demo4quartz.demo2;
 
-import static org.quartz.DateBuilder.futureDate;
-import static org.quartz.DateBuilder.IntervalUnit.SECOND;
-import static org.quartz.JobBuilder.newJob;
 import static org.quartz.CronScheduleBuilder.cronSchedule;
+import static org.quartz.JobBuilder.newJob;
 import static org.quartz.TriggerBuilder.newTrigger;
 import static org.quartz.TriggerKey.triggerKey;
 
