@@ -9,14 +9,9 @@ import static org.quartz.TriggerKey.triggerKey;
 import lombok.extern.slf4j.Slf4j;
 
 import org.quartz.JobDetail;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.quartz.JobListener;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerFactory;
 import org.quartz.Trigger;
-import org.quartz.TriggerListener;
-import org.quartz.Trigger.CompletedExecutionInstruction;
 
 /**
  * @author qiao.yongxin
