@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
+import org.quartz.Trigger;
 
 /**
  * @author qiao.yongxin
@@ -14,7 +15,10 @@ import org.quartz.JobExecutionException;
 public class HelloJob implements Job {
 
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        log.info("job triggered,**********");
+        Trigger trigger = context.getTrigger();
+        log.info(
+                "job triggered,nextFireTime:{},endTime:{},finalFireTime:{},**********",
+                new Object[] {trigger.getNextFireTime(), trigger.getEndTime(),
+                        trigger.getFinalFireTime()});
     }
-
 }
